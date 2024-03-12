@@ -24,3 +24,25 @@ Localizador de Recursos Universal
 ![Alt text](image-2.png)
 *Recurso é o que vem depois do nome do servidor
 
+![alt text](image-3.png)
+*Portas padrão
+
+### Sistema de Nomes de Domínios (DNS)
+
+![alt text](image-4.png)
+
+- Servidores DNS transformam requisições de nomes em endereços IP
+
+> **Domínios**: cada site/sistema possui seu próprio domínio. exemplo: sistema da Alura está sobre o dominio alura.com.br.
+> - Domínios globais: Alura;
+> - Domínios locais: localhost.
+
+
+> cmd: comando nslookup - retorna o ip desejado
+
+### DNS é hierárquico
+
+Quando acessamos algo .com.br ou .org, significa que são o primeiro nível dos nomes dos sites. Inicia-se da raiz (nível mais abstrato) que é para ter um ponto de onde começar, e a partir disso vamos descendo os níveis. Chamamos esse nível de top-level domains (TLD).
+
+![alt text](image-5.png)
+

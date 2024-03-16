@@ -76,3 +76,37 @@ Os códigos que começam com o número 3 indicam redirecionamentos. Por exemplo,
 O HTTP tem duas entidades conversando: o cliente e o servidor. Os códigos que começam com o número 4 indicam erros provindos do lado do cliente, como "400 Bad Request" e "401 Unauthorized".
 
 Já os códigos iniciados com o número 5 indicam erros do lado do servidor. Você provavelmente já se deparou com o código "500 Internal Server Error" (erro interno do servidor), quando algum site estava com problemas. No caso de erros, os servidores são configurados para responder com códigos iniciados com 5.
+
+**Protegendo o ambiente Web com HTTPS**
+
+- Openssl: permite gerar certificados digitais e chaves privadas
+
+- Wireshark: verificar requisições feitas localmente  
+Observa  o que passa pela rede do nosso computador
+
+> **Certificado digital e chave privada e pública**: 
+
+![alt text](image-7.png)
+
+![alt text](image-8.png)
+
+Imagine que você trabalha na modalidade presencial e precisa acessar o prédio onde fica a sede da empresa.
+
+Para fazer isso, você apresenta o seu documento de identidade para uma autoridade que verifica quem pode entrar. Uma vez dentro do prédio, você usa uma chave para abrir a porta do escritório de trabalho.
+
+É importante dizer que você jamais faria uma cópia da chave do seu escritório, pois poderia compartilhar informações sensíveis.
+
+A chave e o certificado usados no nosso projeto funcionam de maneira similar: no lugar do documento de identidade, usamos um Certificado Digital. Trata-se de um documento com informações da sua API, sendo elas a identidade da organização, a chave pública e a assinatura digital.
+
+O servidor mostra o Certificado Digital para o cliente em um processo de autenticação. Além disso, também contamos com uma chave privada que o servidor usa para proteger os dados. Esta chave nunca deixa o servidor.
+
+Se essa chave deixasse o servidor, outros clientes poderiam descriptografá-la e descobrir os dados de outras pessoas.
+
+
+**Controlando o HTTP**
+
+No get usamos o que chamamos de query params, como, por exemplo, o /livros?categoria=1 (passamos direto na URL). No post, enviamos os parâmetros pelo corpo da mensagem, porque são dados maiores, usando o formato JSON, XML, etc.
+
+![alt text](image-9.png)
+
+> Formato dos dados: determinado pelo cabeçalho Content-Type (formato do corpo da mensagem)e o Accept (utilizado na requisição).
